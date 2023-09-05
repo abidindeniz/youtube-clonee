@@ -1,7 +1,7 @@
 import {useEffect} from 'react';
 import {Button} from 'antd';
 import { useNavigate } from 'react-router-dom';
-
+import SearchBar from '../components/searchBar/searchBar'
 function Dashboard() {
     const navigate = useNavigate();
     const dasboardStyle ={ 
@@ -15,8 +15,8 @@ function Dashboard() {
         navigate('/profile')
     }
   return (
-    <div style={dasboardStyle}>
-        <h1>dashboard</h1>
+    <div >
+        <SearchBar />
         <Button onClick={handleSubmit}>Submit</Button>
     </div>
   )
